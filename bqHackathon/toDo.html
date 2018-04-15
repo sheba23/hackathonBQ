@@ -1,0 +1,136 @@
+<!--BQ Hackathon FORM-->
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>To Do List</title>
+		<style>
+		li
+		{
+			color: black;
+			font-size:20px;
+		}
+			body
+			{
+				height: 1000px;
+				text-align: center;
+				background: linear-gradient(#e5ccff,#ff99cc);
+				margin-top: 10%;
+				margin-left: 10%;
+				margin-right: 10%;
+
+			}
+			span
+			{
+				font-family: "Courier New";
+				font-size: 48pt;
+				color:#ffffcc;
+				
+        		
+			}
+
+			#toDoList
+			{
+				font-weight:bold;
+				border-style: solid;
+				border-radius: 15%;
+				padding:20px;
+			}
+
+
+			
+
+			li:hover
+			{
+				color:#ffffcc;
+				font-size:20px;
+			}
+
+			li
+			{
+				
+				font-family: "Courier New";
+				color:black;
+				list-style-type: none;
+			}
+
+			button
+			{
+				border-radius: 15%;
+				padding:10px;
+				font-size: 14pt;
+				font-family: "Courier New";
+				color:#ffffcc;
+				border: 2px solid #ffffcc;
+				background-color: transparent;
+			}
+
+			textarea
+			{
+				font-size: 14pt;
+				font-family: "Courier New";
+			}
+
+			#quote
+			{
+				font-size: 15pt;
+				font-family: "Courier New";
+			}
+
+		</style>
+		<script>
+			function initialize()
+			{
+				listLocation = document.getElementById("locationID")
+				userEvent = document.getElementById("inputID");
+			}
+
+
+			function submitEvent()
+			{
+
+				postedEvent.push(userEvent.value);
+			}
+
+			function makeEvent()
+			{
+				var VALUE = userEvent.value;
+
+				var newText = document.createTextNode(VALUE);
+				var newElement = document.createElement("li");
+				newElement.appendChild(newText);
+
+				listLocation.appendChild(newElement);
+			}
+
+		</script>
+	</head>
+	<body  onload = "initialize()">
+		<!--<ul id = "navigationBarID">
+			<li class = "liClass">About</li>
+			<li class = "liClass">Calendar</li>
+			<li class = "liClass">To Do List</li>
+
+	</ul> -->
+
+
+
+<div>
+		
+		<span id = "toDoList">To Do List</span>
+
+	</br></br></br></br></br>
+		<span id = "quote">"The only limit to the height of your achievements is the reach of your dreams and your willingness to work for them." - Michelle Obama</span>
+			
+		</br></br></br></br>
+	
+		<div>
+			<textarea type = "text" name = "event" id = "inputID" style = "width:500px, height:50px"></textarea>
+		</div>
+		<button onclick = "makeEvent()">Submit</button>
+		<ul id = "locationID">
+
+			</ul>
+
+</div>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1
+{
+  text-align: center;
+  color:black;
+  font-size: 50px;
+  text-shadow: 2px 2px grey;
+
+}
+body
+{
+  background-color: #b3c6ff;
+
+}
+#background
+{
+  position:absolute;
+  top:40%;
+  left:35%;
+  height:50%;
+  z-index:-1;
+}
+
+#toDo
+{
+  font-size: 40px;
+}
+#toDo:hover
+{
+  font-size: 45px;
+
+}
+#form:hover
+{
+  font-size: 45px;
+
+}
+#form
+{
+  font-size: 40px;
+}
+.button
+{
+  margin-right: 20px;
+  border:solid  #6666cc;
+  border-radius: 5px;
+  background-color:#8c8cd9;
+
+}
+</style>
+<script>
+function goToSchedule()
+{
+  window.location = "toDo.html";
+}
+function goToForm()
+{
+  window.location = "index.html"
+}
+</script>
+</head>
+
+<body>
+<h1>Break Glass<h1>
+  <img style = "text-align:center;" id = "background" src = "images/backGif.gif"/>
+  <span class = "button" id = "toDo" onclick = "goToSchedule();">Create a To-Do List </span>
+  <span class = "button" id = "form" onclick = "goToForm();">Chat on our form</span>
+
+
+</body>
+
+</html>

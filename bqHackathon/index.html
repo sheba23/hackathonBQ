@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+h1
+{ color:black;
+text-align: center;
+font-family: Palatino;
+text-shadow: 2px 2px 5px white;
+}
+
+h2
+{ text-align: left;
+image-orientation: (10,10)
+}
+
+h4
+{text-align: topleft;
+}
+
+<body>
+{
+  background-color:#b3c6ff;
+background-repeat: no-repeat;
+height: 100%;
+background-attachment: fixed;
+text-align:center;
+}
+
+  </style>
+  <script src = "data.js"> </script>
+<script>
+function initialize()
+{
+  //display();
+  password = "BQHACKFORM";
+  form = document.getElementById("formId");
+  textbox = document.getElementById("textboxId");
+  submit = document.getElementById("submitId");
+  textbox.style.display = "none";
+  submit.style.display = "none";
+}
+
+function showBox()
+{
+  textbox.style.display = "inline";
+  submit.style.display = "inline";
+
+}
+
+</script>
+</head>
+
+<body onload = "initialize();">
+<h1>Form!<h1>
+  <div id = 'formId'>
+  </div>
+<button onclick = "showBox();">Share Your thoughts</button>
+<div id = "myList"> </div>
+<input type = "text" id = "textboxId" />
+<button id = "submitId" onclick="addPost();">Submit</button> </br>
+<span>Enter password to restart form</span>
+<input id ="passwordTextId" type = "text"> </input>
+<button onclick = "clearData();" id = "submitPassword">Clear All Post</button>
+<h2><img src="something man.jpg" alt="yep"><h2>
+  <h4 style = "text-align:center;">Let's stand together!!</h4>
+
+</body>
+
+</html>
